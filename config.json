@@ -1,0 +1,37 @@
+{
+  "project": {
+    "project_id": "ranjanrishi-project",
+    "region": "us-central1"
+  },
+
+  "dataproc": {
+    "cluster_name": "my-cluster"
+  },
+
+  "storage": {
+    "raw_bucket": "rameshsamplebucket",
+    "raw_folder": "raw/",
+    "file_format": "csv",
+    "temporary_gcs_bucket": "ramtempbucket7"
+  },
+
+  "bigquery": {
+    "raw_dataset": "rawlayer",
+    "write_mode_default": "append",
+    "partition_column": "ingestion_timestamp",
+    "partition_type": "DAY"
+  },
+
+  "audit": {
+    "audit_dataset": "auditlayer",
+    "audit_table": "audit_log"
+  },
+
+  "tables": {
+    "account": { "write_mode": "overwrite" },
+    "branch": { "write_mode": "overwrite" },
+    "customer": { "write_mode": "overwrite" },
+    "products": { "write_mode": "overwrite" },
+    "transaction": { "write_mode": "overwrite" }
+  }
+}

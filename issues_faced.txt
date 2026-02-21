@@ -1,0 +1,5 @@
+dag got failed. as per AI suggestion executed below commands
+
+gcloud dataproc clusters delete my-dataproc-cluster --region=us-central1
+
+gcloud dataproc clusters create my-dataproc-cluster --region=us-central1 --zone=us-central1-a --master-machine-type=e2-medium --worker-machine-type=e2-medium --num-workers=2 --master-boot-disk-size=50GB --worker-boot-disk-size=50GB --image-version=2.1-debian11

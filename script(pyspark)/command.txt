@@ -1,0 +1,1 @@
+gsutil cp C:\Bigdata_practice\production_event_driven_approach_using_pubsub_dataproc_cloud_composer\script(pyspark)\pyspark_pubsub_job.py gs://rameshsamplebucket/scripts

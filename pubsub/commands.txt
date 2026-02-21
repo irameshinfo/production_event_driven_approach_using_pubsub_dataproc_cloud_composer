@@ -1,0 +1,4 @@
+gcloud pubsub topics create gcs-file-trigger
+
+gcloud pubsub subscriptions create gcs-file-trigger-sub \
+  --topic=gcs-file-trigger

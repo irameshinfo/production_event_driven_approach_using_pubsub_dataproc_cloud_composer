@@ -1,0 +1,1 @@
+gsutil notification create -t gcs-file-trigger -f json -e OBJECT_FINALIZE gs://rameshsamplebucket
