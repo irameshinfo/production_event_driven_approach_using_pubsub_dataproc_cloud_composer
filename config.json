@@ -5,7 +5,7 @@
   },
 
   "dataproc": {
-    "cluster_name": "my-cluster"
+    "cluster_name": "my-dataproc-cluster"
   },
 
   "storage": {
