@@ -1,0 +1,71 @@
+product_id,product_name,product_type,price,launch_date,is_active,category,vendor_name
+P001,Product_1,Savings Account,14709,2017-02-24,False,SME,Vendor_1
+P002,Product_2,Loan,1650,2019-09-19,True,Retail,Vendor_2
+P003,Product_3,Savings Account,43355,2022-06-16,True,Corporate,Vendor_3
+P004,Product_4,Loan,12756,2019-04-02,True,Retail,Vendor_4
+P005,Product_5,Credit Card,26213,2022-08-06,True,SME,Vendor_5
+P006,Product_6,Savings Account,21612,2023-05-23,False,SME,Vendor_6
+P007,Product_7,Loan,18358,2016-12-13,True,Retail,Vendor_7
+P008,Product_8,Loan,4649,2021-11-26,True,Corporate,Vendor_8
+P009,Product_9,Credit Card,18392,2021-05-20,False,SME,Vendor_9
+P010,Product_10,Savings Account,23112,2018-05-17,True,SME,Vendor_10
+P011,Product_11,Savings Account,42140,2019-07-22,True,SME,Vendor_11
+P012,Product_12,Credit Card,33484,2021-02-22,True,Retail,Vendor_12
+P013,Product_13,Savings Account,26293,2024-05-07,False,Retail,Vendor_13
+P014,Product_14,Credit Card,44632,2015-01-02,True,SME,Vendor_14
+P015,Product_15,Savings Account,35241,2018-05-29,False,Corporate,Vendor_15
+P016,Product_16,Fixed Deposit,21802,2018-03-21,False,Retail,Vendor_16
+P017,Product_17,Savings Account,1908,2017-05-10,False,Corporate,Vendor_17
+P018,Product_18,Loan,7659,2019-10-27,False,Retail,Vendor_18
+P019,Product_19,Loan,17218,2023-10-24,False,Retail,Vendor_19
+P020,Product_20,Fixed Deposit,11802,2021-07-03,True,Corporate,Vendor_20
+P021,Product_21,Savings Account,38149,2021-10-20,False,Corporate,Vendor_21
+P022,Product_22,Loan,17497,2022-05-05,False,Corporate,Vendor_22
+P023,Product_23,Loan,2607,2018-08-12,False,Retail,Vendor_23
+P024,Product_24,Savings Account,7204,2020-03-19,True,Corporate,Vendor_24
+P025,Product_25,Credit Card,39196,2019-12-15,False,Corporate,Vendor_25
+P026,Product_26,Savings Account,28579,2019-12-17,False,Corporate,Vendor_26
+P027,Product_27,Credit Card,22754,2022-07-30,True,Corporate,Vendor_27
+P028,Product_28,Fixed Deposit,47845,2017-05-25,False,Corporate,Vendor_28
+P029,Product_29,Fixed Deposit,20657,2020-09-24,False,Corporate,Vendor_29
+P030,Product_30,Loan,28699,2020-04-22,True,Corporate,Vendor_30
+P031,Product_31,Loan,39828,2023-11-26,False,Retail,Vendor_31
+P032,Product_32,Loan,33616,2023-12-05,True,Corporate,Vendor_32
+P033,Product_33,Credit Card,7678,2023-04-03,False,Retail,Vendor_33
+P034,Product_34,Loan,25344,2016-11-26,False,SME,Vendor_34
+P035,Product_35,Savings Account,37887,2022-05-22,False,SME,Vendor_35
+P036,Product_36,Credit Card,12557,2015-12-14,True,Retail,Vendor_36
+P037,Product_37,Fixed Deposit,16793,2018-03-08,True,Corporate,Vendor_37
+P038,Product_38,Credit Card,3008,2020-10-12,True,Retail,Vendor_38
+P039,Product_39,Loan,46550,2022-06-12,True,SME,Vendor_39
+P040,Product_40,Savings Account,28677,2022-02-05,False,Retail,Vendor_40
+P041,Product_41,Savings Account,210,2021-12-11,True,SME,Vendor_41
+P042,Product_42,Loan,34173,2018-10-04,True,Retail,Vendor_42
+P043,Product_43,Savings Account,35387,2016-01-18,True,Retail,Vendor_43
+P044,Product_44,Credit Card,45113,2024-03-06,False,Retail,Vendor_44
+P045,Product_45,Credit Card,47248,2023-06-04,False,Retail,Vendor_45
+P046,Product_46,Loan,48724,2017-08-20,False,Retail,Vendor_46
+P047,Product_47,Savings Account,48402,2022-07-18,False,SME,Vendor_47
+P048,Product_48,Fixed Deposit,44050,2018-06-25,False,Retail,Vendor_48
+P049,Product_49,Credit Card,13012,2017-07-09,True,Retail,Vendor_49
+P050,Product_50,Credit Card,23969,2024-01-17,True,Retail,Vendor_50
+P051,Product_51,Credit Card,28365,2017-03-26,False,Corporate,Vendor_51
+P052,Product_52,Credit Card,4685,2016-08-26,False,SME,Vendor_52
+P053,Product_53,Fixed Deposit,43631,2015-04-11,True,Retail,Vendor_53
+P054,Product_54,Loan,21739,2015-07-09,False,SME,Vendor_54
+P055,Product_55,Credit Card,40939,2017-09-29,False,Retail,Vendor_55
+P056,Product_56,Savings Account,20672,2020-04-30,True,Corporate,Vendor_56
+P057,Product_57,Fixed Deposit,43575,2021-11-08,False,SME,Vendor_57
+P058,Product_58,Credit Card,8267,2024-07-12,False,Corporate,Vendor_58
+P059,Product_59,Savings Account,47269,2023-08-14,False,Corporate,Vendor_59
+P060,Product_60,Credit Card,19781,2015-10-26,False,Retail,Vendor_60
+P061,Product_61,Loan,33334,2020-02-09,True,SME,Vendor_61
+P062,Product_62,Fixed Deposit,20369,2019-08-25,False,SME,Vendor_62
+P063,Product_63,Loan,43805,2024-12-08,True,SME,Vendor_63
+P064,Product_64,Fixed Deposit,26864,2022-01-23,False,SME,Vendor_64
+P065,Product_65,Credit Card,21476,2021-06-15,False,Retail,Vendor_65
+P066,Product_66,Credit Card,26471,2017-03-07,False,Retail,Vendor_66
+P067,Product_67,Fixed Deposit,45792,2023-01-21,True,Corporate,Vendor_67
+P068,Product_68,Savings Account,19476,2022-10-23,False,Retail,Vendor_68
+P069,Product_69,Savings Account,36433,2019-04-22,False,SME,Vendor_69
+P070,Product_70,Credit Card,8441,2020-07-17,False,Retail,Vendor_70

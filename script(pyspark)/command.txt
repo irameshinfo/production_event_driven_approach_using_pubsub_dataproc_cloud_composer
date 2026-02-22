@@ -2,6 +2,9 @@ cluster creation command
 ========================
 gcloud dataproc clusters create my-dataproc-cluster --region=us-central1 --zone=us-central1-a --master-machine-type=e2-medium --worker-machine-type=e2-medium --num-workers=2 --master-boot-disk-size=50GB --worker-boot-disk-size=50GB --image-version=2.1-debian11
 
+audit layer dataset creation
+============================
+bq --location=us-central1 mk ranjanrishi-project:auditlayer
 
 copy file from local to gs
 ==========================
