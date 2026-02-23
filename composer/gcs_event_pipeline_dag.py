@@ -2,6 +2,7 @@ from airflow import DAG
 from airflow.utils.dates import days_ago
 from airflow.providers.google.cloud.sensors.pubsub import PubSubPullSensor
 from airflow.providers.google.cloud.operators.dataproc import DataprocSubmitJobOperator
+from airflow.providers.google.cloud.operators.bigquery import BigQueryInsertJobOperator
 from airflow.operators.python import PythonOperator
 from datetime import timedelta
 import json
@@ -76,5 +77,27 @@ with DAG(
             },
         },
     )
+    
+    curated_layer_load = BigQueryInsertJobOperator(
+        task_id="curated_layer_load",
+        configuration={
+            "query": {
+                "query": "CALL `ranjanrishi-project.testdataset.sp_curated_layer_data_load`()",
+                "useLegacySql": False,
+            }
+        },
+        location="us-central1",
+    )
 
-    wait_for_file >> extract >> submit_job
+    reporting_layer_load = BigQueryInsertJobOperator(
+        task_id="reporting_layer_load",
+        configuration={
+            "query": {
+                "query": "CALL `ranjanrishi-project.reporting.sp_kpi_report_load`()",
+                "useLegacySql": False,
+            }
+        },
+        location="us-central1",
+    )
+
+    wait_for_file >> extract >> submit_job >> curated_layer_load >> reporting_layer_load

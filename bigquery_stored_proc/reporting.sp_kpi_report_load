@@ -1,0 +1,94 @@
+CREATE OR REPLACE PROCEDURE `ranjanrishi-project.reporting.sp_kpi_report_load`()
+BEGIN
+/*
+------------------------------------------
+1.	Top 5 customers by transaction volume
+------------------------------------------
+*/
+CREATE OR REPLACE TABLE ranjanrishi-project.reporting.top_five_customer_trans
+as
+SELECT
+  c.customer_id as customer_id,
+  c.name as customer_name,
+  SUM(t.amount) AS total_volume
+FROM `ranjanrishi-project.curated.transaction` t
+JOIN `ranjanrishi-project.curated.customer` c
+  ON t.account_id = c.account_id
+  and upper(t.status)='SUCCESS'  
+GROUP BY c.customer_id, c.name
+ORDER BY total_volume DESC
+LIMIT 5;
+/*
+------------------------------------------
+2.Monthly transaction trends per branch
+--------------------------------------------
+*/
+CREATE OR REPLACE TABLE ranjanrishi-project.reporting.monthly_trans_trend_per_branch
+as
+SELECT
+  branch_id as branch_id,
+  FORMAT_DATE('%Y-%m', DATE(date)) AS year_month,  
+  COUNT(*) AS total_transactions,
+  SUM(amount) AS total_amount,
+  status as transaction_status
+FROM `ranjanrishi-project.curated.transaction`
+GROUP BY branch_id, year_month,status
+ORDER BY branch_id, year_month,status;
+
+/*
+------------------------------------------
+3.	Product-wise revenue contribution
+------------------------------------------
+*/
+CREATE OR REPLACE TABLE ranjanrishi-project.reporting.prod_wise_revenue
+as
+SELECT
+  p.product_id as product_id,
+  SUM(t.amount) AS total_revenue,
+  ROUND(
+    SUM(t.amount) * 100 /
+    SUM(SUM(t.amount)) OVER (),
+    2
+  ) AS revenue_percentage
+FROM `ranjanrishi-project.curated.transaction` t
+JOIN `ranjanrishi-project.curated.products` p
+  ON t.product_id = p.product_id
+  and status='Success'
+GROUP BY p.product_id
+ORDER BY total_revenue DESC;
+
+/*
+------------------------------------------
+4. Inactive Accounts (No Transactions in Last 3 Months)
+------------------------------------------
+*/
+CREATE OR REPLACE TABLE ranjanrishi-project.reporting.Last_three_month_inact_acct
+as
+SELECT
+  a.account_id account_id,account_name
+FROM `ranjanrishi-project.curated.account` a
+LEFT JOIN `ranjanrishi-project.curated.transaction` t
+  ON a.account_id = t.account_id
+  AND t.date >= DATE_SUB(CURRENT_DATE(), INTERVAL 3 MONTH)
+WHERE t.account_id IS NULL;
+
+/*
+------------------------------------------
+5.	Suspicious transactions (amount > ₹1,00,000)
+*/
+CREATE OR REPLACE TABLE ranjanrishi-project.reporting.suspicious_trans
+as
+SELECT
+  t.transaction_id,
+  c.customer_id,
+  c.name,
+  t.amount,
+  t.date,
+  t.status
+FROM `ranjanrishi-project.curated.transaction` t
+join `ranjanrishi-project.curated.customer` c
+on t.account_id=c.account_id
+WHERE amount > 100000
+ORDER BY amount DESC;
+
+END;
